@@ -1,0 +1,60 @@
+
+$contents-bg-bottom-color:   #ccc;
+$contents-bg-top-color:      lighten($contents-bg-bottom-color, 10%);
+
+$contents-base-font-size: 32px;
+$contents-color: #333;
+$contents-link-color: #2E60E2;
+
+.extslide-page {
+  font-size: $contents-base-font-size;
+  color: #333;
+  @include background-image(linear-gradient(top, $contents-bg-top-color, $contents-bg-bottom-color));
+  background-color: $contents-bg-top-color;
+
+  line-height: 1.6;
+  margin: 40px;
+  padding: 40px 60px;
+  border-radius: 12px;
+
+  h1 {
+    font-size: 2em;
+    margin: 0 0 .6em 0;
+    text-shadow: 1px 1px 1px #FFF;
+
+    &.title {
+      text-align: center;
+      font-size: 3em;
+      position: relative;
+      top: 50%;
+    }
+  }
+
+  .vcenter {
+      position: relative;
+      top: 50%;
+  }
+
+  p, ul {
+    margin: .6em 0;
+  }
+
+  a {
+    color: $contents-link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($contents-link-color, 20%);
+    }
+  }
+
+  code {
+    padding: .6em;
+    margin: .6em;
+    display: block;
+    white-space: pre;
+    background: #333;
+    color: #EEE;
+    border-radius: 6px;
+  }
+}
